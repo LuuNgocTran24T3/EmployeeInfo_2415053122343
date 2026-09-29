@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         // Tạo đối tượng Employee từ Model
         val employee = Employee(
             employeeId = "2415053122343",
-            fullName = "Lưu Ngc Trân",
+            fullName = "Lưu Ngọc Trân",
             department = "IT",
             age = 20,
             salary = 15_000_000.0,
