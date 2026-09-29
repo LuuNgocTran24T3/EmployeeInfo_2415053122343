@@ -2,99 +2,341 @@
 
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#F3F6FA"
+    android:fillViewport="true">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="24dp">
+        android:padding="20dp">
+
+        <!-- ==================== TIÊU ĐỀ ==================== -->
 
         <TextView
-            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="EMPLOYEE INFO"
+            android:textColor="#1E3A5F"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp" />
+
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="THÔNG TIN NHÂN VIÊN"
-            android:textSize="26sp"
+            android:textColor="#64748B"
+            android:textSize="14sp"
             android:textStyle="bold"
-            android:layout_marginBottom="24dp" />
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="20dp" />
 
-        <TextView
-            android:id="@+id/tvEmployeeId"
+
+        <!-- ==================== THÔNG TIN CÁ NHÂN ==================== -->
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:padding="8dp" />
+            android:orientation="vertical"
+            android:background="#FFFFFF"
+            android:elevation="5dp"
+            android:padding="20dp">
+
+            <!-- Avatar -->
+            <TextView
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="NV"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:background="#2563EB" />
+
+            <!-- Họ tên -->
+            <TextView
+                android:id="@+id/tvFullName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Nguyen Van An"
+                android:textColor="#172033"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:layout_marginTop="12dp" />
+
+            <!-- Mã nhân viên -->
+            <TextView
+                android:id="@+id/tvEmployeeId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Mã nhân viên: NV001"
+                android:textColor="#64748B"
+                android:textSize="14sp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="15dp" />
+
+            <!-- Đường phân cách -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E2E8F0"
+                android:layout_marginBottom="10dp" />
+
+
+            <!-- ==================== PHÒNG BAN ==================== -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Phòng ban"
+                    android:textColor="#64748B"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tvDepartment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="IT"
+                    android:textColor="#172033"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+            <!-- ==================== TUỔI ==================== -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Tuổi"
+                    android:textColor="#64748B"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tvAge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="25"
+                    android:textColor="#172033"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+            <!-- ==================== GIỚI TÍNH ==================== -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Giới tính"
+                    android:textColor="#64748B"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tvGender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nam"
+                    android:textColor="#172033"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+            <!-- ==================== THÂM NIÊN ==================== -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Thâm niên"
+                    android:textColor="#64748B"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tvSeniority"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4 năm"
+                    android:textColor="#172033"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+            <!-- ==================== LƯƠNG ==================== -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Lương"
+                    android:textColor="#64748B"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tvSalary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="15.000.000 VNĐ"
+                    android:textColor="#16A34A"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <!-- ==================== TIÊU ĐỀ MỞ RỘNG ==================== -->
 
         <TextView
-            android:id="@+id/tvFullName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:padding="8dp" />
+            android:text="THÔNG TIN MỞ RỘNG"
+            android:textColor="#1E3A5F"
+            android:textSize="19sp"
+            android:textStyle="bold"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="12dp" />
 
-        <TextView
-            android:id="@+id/tvDepartment"
+
+        <!-- ==================== TÊN VIẾT HOA ==================== -->
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:padding="8dp" />
+            android:orientation="vertical"
+            android:background="#FFFFFF"
+            android:elevation="3dp"
+            android:padding="16dp"
+            android:layout_marginBottom="12dp">
 
-        <TextView
-            android:id="@+id/tvAge"
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tên viết hoa"
+                android:textColor="#64748B"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvUpperName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="NGUYEN VAN AN"
+                android:textColor="#172033"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:layout_marginTop="5dp" />
+
+        </LinearLayout>
+
+
+        <!-- ==================== SO SÁNH LƯƠNG ==================== -->
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:padding="8dp" />
+            android:orientation="vertical"
+            android:background="#FFFFFF"
+            android:elevation="3dp"
+            android:padding="16dp"
+            android:layout_marginBottom="12dp">
 
-        <TextView
-            android:id="@+id/tvSalary"
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="So sánh với lương chuẩn"
+                android:textColor="#64748B"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvSalaryStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cao hơn lương chuẩn"
+                android:textColor="#16A34A"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:layout_marginTop="5dp" />
+
+        </LinearLayout>
+
+
+        <!-- ==================== XẾP LOẠI ==================== -->
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:padding="8dp" />
+            android:orientation="vertical"
+            android:background="#FFFFFF"
+            android:elevation="3dp"
+            android:padding="16dp"
+            android:layout_marginBottom="25dp">
 
-        <TextView
-            android:id="@+id/tvGender"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:padding="8dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Xếp loại thâm niên"
+                android:textColor="#64748B"
+                android:textSize="14sp" />
 
-        <TextView
-            android:id="@+id/tvSeniority"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:padding="8dp" />
+            <TextView
+                android:id="@+id/tvSeniorityRank"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nhân viên có kinh nghiệm"
+                android:textColor="#2563EB"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:layout_marginTop="5dp" />
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="16dp" />
+        </LinearLayout>
 
-        <TextView
-            android:id="@+id/tvUpperName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:padding="8dp" />
-
-        <TextView
-            android:id="@+id/tvSalaryStatus"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:padding="8dp" />
-
-        <TextView
-            android:id="@+id/tvSeniorityRank"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:padding="8dp" />
 
     </LinearLayout>
 
